@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Prithvi - Earth Intelligence Dashboard by Ministry of Earth Sciences">
+
+    <title>Prithvi | Ministry of Earth Sciences</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo-area">
+
+            <div class="india-logo">
+                🇮🇳
+            </div>
+            <div class="logo-text">
+                <h2>PRITHVI</h2>
+                <span>Ministry of Earth Sciences</span>
+            </div>
+
+        </div>
+
+
+        <nav class="nav-links">
+
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="hazards.html">Hazards</a>
+    <a href="mission.html">Mission Mausam</a>
+    <a href="services.html">Services</a>
+
+</nav>
+
+
+        <div class="nav-actions">
+
+            <button id="searchBtn" class="icon-btn">
+                🔍
+            </button>
+
+            <button id="themeBtn" class="icon-btn">
+                🌙
+            </button>
+
+            <button id="languageBtn" class="language-btn">
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO SECTION
+    ========================================== -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    🌍 INDIA'S EARTH INTELLIGENCE PLATFORM
+                </span>
+
+                <h1>
+                    Understanding Our Planet.
+                    <span>Protecting Our Future.</span>
+                </h1>
+
+                <p>
+                    Explore real-time insights into India's weather,
+                    climate, oceans and natural hazards through
+                    one intelligent platform.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="dashboard.html" class="primary-btn">
+    Explore Dashboard →
+</a>
+
+<a href="hazards.html" class="secondary-btn">
+    ⚠️ Live Alerts
+</a>
+                </div>
+
+
+                <div class="hero-stats">
+
+                    <div class="hero-stat">
+                        <strong>24×7</strong>
+                        <span>Monitoring</span>
+                    </div>
+
+                    <div class="hero-stat">
+                        <strong>360°</strong>
+                        <span>Earth Insights</span>
+                    </div>
+
+                    <div class="hero-stat">
+                        <strong>Real-Time</strong>
+                        <span>Information</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Earth Visual -->
+
+            <div class="earth-container">
+
+                <div class="earth-glow"></div>
+
+                <div class="earth">
+                    🌍
+                </div>
+
+                <div class="orbit orbit-one"></div>
+
+                <div class="orbit orbit-two"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             LIVE EARTH DASHBOARD
+        ========================================== -->
+
+        <section id="dashboard" class="dashboard-section">
+
+            <div class="section-heading">
+
+                <span>LIVE DATA</span>
+
+                <h2>
+                    Earth at a Glance
+                </h2>
+
+                <p>
+                    Monitor important Earth-system parameters
+                    from across India.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+
+                <!-- Weather -->
+
+                <div class="data-card weather-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+                            🌡️
+                        </div>
+
+                        <span class="status live">
+                            ● LIVE
+                        </span>
+
+                    </div>
+
+                    <h3>28°C</h3>
+
+                    <p>Temperature</p>
+
+                    <small>
+                        New Delhi, India
+                    </small>
+
+                </div>
+
+
+                <!-- Rain -->
+
+                <div class="data-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+                            🌧️
+                        </div>
+
+                        <span class="status">
+                            LIVE
+                        </span>
+
+                    </div>
+
+                    <h3>62%</h3>
+
+                    <p>Rain Probability</p>
+
+                    <small>
+                        Current observation
+                    </small>
+
+                </div>
+
+
+                <!-- Ocean -->
+
+                <div class="data-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+                            🌊
+                        </div>
+
+                        <span class="status">
+                            LIVE
+                        </span>
+
+                    </div>
+
+                    <h3>1.2 m</h3>
+
+                    <p>Wave Height</p>
+
+                    <small>
+                        Arabian Sea
+                    </small>
+
+                </div>
+
+
+                <!-- Earthquake -->
+
+                <div class="data-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+                            🌋
+                        </div>
+
+                        <span class="status">
+                            MONITORING
+                        </span>
+
+                    </div>
+
+                    <h3>4.2 M</h3>
+
+                    <p>Latest Seismic Event</p>
+
+                    <small>
+                        Himalayan Region
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             INDIA HAZARD MAP
+        ========================================== -->
+
+        <section id="hazards" class="hazard-section">
+
+            <div class="section-heading">
+
+                <span>INTERACTIVE MAP</span>
+
+                <h2>
+                    India's Hazard Monitor
+                </h2>
+
+                <p>
+                    Explore weather and natural hazard conditions
+                    across different regions of India.
+                </p>
+
+            </div>
+
+
+            <div class="hazard-container">
+
+
+                <!-- Map -->
+
+                <div class="map-card">
+                <div id="indiaLiveMap"></div>
+                </div>
+
+                        <span class="map-live">
+                            ● LIVE MONITORING
+                        </span>
+
+                        <h3>
+                            India
+                        </h3>
+
+                        <p>
+                            Earth Observation Map
+                        </p>
+
+                    </div>
+
+
+                    <!-- Live interactive India map -->
+                    <div id="indiaLiveMap"></div>
+
+                </div>
+
+
+                <!-- Hazard Controls -->
+
+                <div class="hazard-controls">
+
+                    <h3>
+                        Explore Layers
+                    </h3>
+
+
+                    <button class="hazard-btn active">
+
+                        <span>🌦️</span>
+
+                        <div>
+                            <strong>Weather</strong>
+                            <small>Current conditions</small>
+                        </div>
+
+                    </button>
+
+
+                    <button class="hazard-btn">
+
+                        <span>🌪️</span>
+
+                        <div>
+                            <strong>Cyclone</strong>
+                            <small>Storm activity</small>
+                        </div>
+
+                    </button>
+
+
+                    <button class="hazard-btn">
+
+                        <span>🌋</span>
+
+                        <div>
+                            <strong>Earthquake</strong>
+                            <small>Seismic activity</small>
+                        </div>
+
+                    </button>
+
+
+                    <button class="hazard-btn">
+
+                        <span>🌧️</span>
+
+                        <div>
+                            <strong>Rainfall</strong>
+                            <small>Precipitation data</small>
+                        </div>
+
+                    </button>
+
+
+                    <button class="hazard-btn">
+
+                        <span>🌡️</span>
+
+                        <div>
+                            <strong>Heatwave</strong>
+                            <small>Temperature risk</small>
+                        </div>
+
+                    </button>
+
+
+                    <button class="hazard-btn">
+
+                        <span>🌊</span>
+
+                        <div>
+                            <strong>Tsunami</strong>
+                            <small>Coastal alerts</small>
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             LIVE ALERTS
+        ========================================== -->
+
+        <section class="alerts-section">
+
+            <div class="section-heading">
+
+                <span>EMERGENCY CENTER</span>
+
+                <h2>
+                    Live Earth Alerts
+                </h2>
+
+                <p>
+                    Important weather and natural hazard
+                    notifications.
+                </p>
+
+            </div>
+
+
+            <div class="alerts-grid">
+
+
+                <!-- Alert 1 -->
+
+                <div class="alert-card danger">
+
+                    <div class="alert-icon">
+                        🌪️
+                    </div>
+
+                    <div class="alert-content">
+
+                        <span class="alert-level">
+                            HIGH ALERT
+                        </span>
+
+                        <h3>
+                            Cyclone Activity
+                        </h3>
+
+                        <p>
+                            Strong weather system detected
+                            over the coastal region.
+                        </p>
+
+                        <button>
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Alert 2 -->
+
+                <div class="alert-card warning">
+
+                    <div class="alert-icon">
+                        🌧️
+                    </div>
+
+                    <div class="alert-content">
+
+                        <span class="alert-level">
+                            MODERATE
+                        </span>
+
+                        <h3>
+                            Heavy Rainfall
+                        </h3>
+
+                        <p>
+                            Heavy rainfall expected in
+                            selected regions.
+                        </p>
+
+                        <button>
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Alert 3 -->
+
+                <div class="alert-card info">
+
+                    <div class="alert-icon">
+                        🌊
+                    </div>
+
+                    <div class="alert-content">
+
+                        <span class="alert-level">
+                            INFORMATION
+                        </span>
+
+                        <h3>
+                            Ocean Conditions
+                        </h3>
+
+                        <p>
+                            Updated ocean and wave conditions
+                            are available.
+                        </p>
+
+                        <button>
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             MISSION MAUSAM
+        ========================================== -->
+
+        <section id="mission" class="mission-section">
+
+            <div class="mission-content">
+
+                <span class="mission-tag">
+                    🇮🇳 NATIONAL MISSION
+                </span>
+
+                <h2>
+                    Mission Mausam
+                </h2>
+
+                <h3>
+                    Making India Weather-Ready
+                    & Climate-Smart
+                </h3>
+
+                <p>
+                    Advancing weather observation, forecasting,
+                    modelling and early-warning capabilities
+                    to build a safer and more resilient India.
+                </p>
+
+
+                <a href="mission.html" class="mission-btn">
+    Explore Mission Mausam →
+</a>
+
+            </div>
+
+
+            <div class="mission-features">
+
+                <div class="mission-feature">
+
+                    <span>📡</span>
+
+                    <h4>
+                        Advanced Observation
+                    </h4>
+
+                    <p>
+                        Better monitoring of Earth's atmosphere.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-feature">
+
+                    <span>🤖</span>
+
+                    <h4>
+                        AI & ML
+                    </h4>
+
+                    <p>
+                        Intelligent weather forecasting systems.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-feature">
+
+                    <span>⚠️</span>
+
+                    <h4>
+                        Early Warning
+                    </h4>
+
+                    <p>
+                        Timely information for safer communities.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-feature">
+
+                    <span>📊</span>
+
+                    <h4>
+                        Decision Support
+                    </h4>
+
+                    <p>
+                        Data-driven information for better decisions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             EARTH SCIENCE SERVICES
+        ========================================== -->
+
+        <section id="services" class="services-section">
+
+            <div class="section-heading">
+
+                <span>EXPLORE</span>
+
+                <h2>
+                    Earth Science Services
+                </h2>
+
+                <p>
+                    Discover India's Earth-system information
+                    and scientific services.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ☁️
+                    </div>
+
+                    <h3>
+                        Weather
+                    </h3>
+
+                    <p>
+                        Weather observations, forecasts
+                        and alerts.
+                    </p>
+
+                    <a href="services.html">
+    Explore →
+</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🌊
+                    </div>
+
+                    <h3>
+                        Ocean
+                    </h3>
+
+                    <p>
+                        Ocean conditions, waves and
+                        marine information.
+                    </p>
+
+                    <a href="services.html">
+    Explore →
+</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🌋
+                    </div>
+
+                    <h3>
+                        Seismic
+                    </h3>
+
+                    <p>
+                        Earthquake monitoring and
+                        seismic information.
+                    </p>
+
+                    <a href="services.html">
+    Explore →
+</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🌡️
+                    </div>
+
+                    <h3>
+                        Climate
+                    </h3>
+
+                    <p>
+                        Climate observations, trends
+                        and insights.
+                    </p>
+
+                    <a href="services.html">
+    Explore →
+</a>
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🧊
+                    </div>
+
+                    <h3>
+                        Polar Science
+                    </h3>
+
+                    <p>
+                        Research and observations from
+                        polar regions.
+                    </p>
+
+                    <a href="services.html">
+    Explore →
+</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🛰️
+                    </div>
+
+                    <h3>
+                        Earth Observation
+                    </h3>
+
+                    <p>
+                        Scientific data for understanding
+                        our planet.
+                    </p>
+
+                    <a href="services.html">
+    Explore →
+</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             AI ASSISTANT
+        ========================================== -->
+
+        <!-- ================= AI PRITHVI ================= -->
+
+<section class="ai-section" id="ai">
+    <div class="ai-background">
+        <div class="ai-orb orb-one"></div>
+        <div class="ai-orb orb-two"></div>
+        <div class="ai-grid"></div>
+    </div>
+
+    <div class="ai-wrapper">
+
+        <div class="ai-intro">
+            <span class="ai-label">✦ INTELLIGENT EARTH ASSISTANT</span>
+
+            <h2>
+                Meet <span>AI Prithvi</span>
+            </h2>
+
+            <p>
+                Ask questions about weather, climate, oceans,
+                earthquakes and Mission Mausam.
+            </p>
+
+            <div class="ai-features">
+                <div>🌦️ Weather Insights</div>
+                <div>🌊 Ocean Information</div>
+                <div>⚠️ Hazard Guidance</div>
+            </div>
+        </div>
+
+        <div class="ai-chat-box">
+
+            <div class="ai-chat-header">
+                <div class="ai-profile">
+                    <div class="ai-avatar">🌍</div>
+
+                    <div>
+                        <h3>AI Prithvi</h3>
+                        <span>
+                            <i></i> Online • Earth Intelligence
+                        </span>
+                    </div>
+                </div>
+
+                <div class="ai-status">AI</div>
+            </div>
+
+            <div class="ai-chat-messages" id="aiMessages">
+                <div class="ai-message bot-message">
+                    <div class="message-icon">🌍</div>
+                    <div>
+                        Namaste! Main <b>AI Prithvi</b> hoon.
+                        Aap weather, climate, cyclone, earthquake
+                        ya Mission Mausam ke baare mein pooch sakte hain.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-suggestions">
+                <button class="suggestion-btn">
+                    Weather kya hai?
+                </button>
+
+                <button class="suggestion-btn">
+                    Mission Mausam
+                </button>
+
+                <button class="suggestion-btn">
+                    Cyclone safety
+                </button>
+            </div>
+
+            <div class="ai-input-area">
+                <input
+                    type="text"
+                    id="aiInput"
+                    placeholder="Ask AI Prithvi something..."
+                    autocomplete="off"
+                >
+
+                <button id="aiSend" title="Send message">
+                    ➤
+                </button>
+            </div>
+
+            <p class="ai-disclaimer">
+                AI Prithvi provides educational information.
+                Always follow official alerts during emergencies.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <h2>
+                    🌍 PRITHVI
+                </h2>
+
+                <p>
+                    Earth Intelligence for
+                    a Safer India.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="hazards.html">
+                    Hazard Monitor
+                </a>
+
+                <a href="mission.html">
+                    Mission Mausam
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Services
+                </h4>
+
+                <a href="services.html">
+                    Weather
+                </a>
+
+                <a href="services.html">
+                    Ocean
+                </a>
+
+                <a href="services.html">
+                    Climate
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Connect
+                </h4>
+
+                <a href="#">
+                    About MoES
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Important Links
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Prithvi — Ministry of Earth Sciences
+            </p>
+
+            <p>
+                Government of India
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
